@@ -1,0 +1,81 @@
+Line One
+1
+Begin Blvd.
+Southbound
+0
+2
+Sassy St.
+Southbound
+0
+3
+Quincy Quarter
+Southbound
+0
+4
+Northern Market Ave.
+Southbound
+0
+5
+Central Center Rd.
+Southbound
+0
+6
+Long John Jct.
+Southbound
+0
+7
+Silly City Art Museum
+Southbound
+0
+8
+Kicka Can Ct.
+Southbnound
+0
+9
+Kearney Park
+Southbound
+0
+10
+South End Stop
+Southbound
+0
+11
+The Great Bambooy Rd.
+Northbound
+0
+12
+Dont Kicka Can Ct.
+Northbound
+0
+13
+Silly City Art Museum
+Northbound
+0
+14
+Sir Jeffers Ave.
+Northbound
+0
+15
+Up Down Ave.
+Northbound
+0
+16
+North Plains Blvd.
+Northbound
+0
+17
+Too Lazy To Name This Street St.
+Northbound
+0
+18
+Loopy Ln.
+Northbound
+0
+19
+Sassy St.
+Northbound
+0
+20
+Begin Blvd.
+Northbound
+0

@@ -1,0 +1,175 @@
+
+
+PUSH 10
+PUSH 114 r
+PUSH 101 e
+PUSH 98  b
+PUSH 109 m
+PUSH 117 u
+PUSH 110 n 
+PUSH 32
+PUSH 114 r
+PUSH 101 e
+PUSH 116 t
+PUSH 110 n
+PUSH 101 e
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+             the following block of code was taken from Convert.sm in exercise 08
+PUSH 0       accumulator for the number we're building -- initially 0
+READC        get first character
+DUP 0        check to see if it is newline (10)
+PUSH -10     
+ADD          
+BEGIN        loop as long as not newline
+  PUSH -48   convert ascii digit to integer ('0' = 48)
+  ADD      
+  SWAP 1     accumulator = accumlator*10 + new digit
+  PUSH 10
+  MUL
+  ADD  
+  READC      get next character
+  DUP 0      once again, check for newline
+  PUSH -10
+  ADD
+END
+POP          get rid of last character we read (newline)
+             end block of code takes from exercise 08
+PUSH 1  1
+DUP 0   1,42,42
+BEGIN
+SWAP 1
+PUSH 15 
+PUSH 5
+PUSH 3
+  DUP 4   42,1,15,5,3,42
+  DUP 3   42,1,15,5,3,42,15
+  DIV     42,1,15,5,3,2 
+  DUP 3   42,1,15,5,3,2,15
+  MUL     42,1,15,5,3,30
+  DUP 5   42,1,15,5,3,30,42
+  NEG     42,1,15,5,3,30,-42
+  ADD     42,1,15,5,3,-12
+  NEG     42,1,15,5,3,12
+  DUP 0   42,1,15,5,3,12,12
+  PUSH 0  42,1,15,5,3,12,12,0
+  LEQ     42,1,15,5,3,12,0
+  BEGIN   42,1,15,5,3,12,         <-print flimflam begin
+    PUSH 0 42,1,15,5,3,12,0
+    PUSH 10
+    PUSH 109 m
+    PUSH 97  a
+    PUSH 108 l 
+    PUSH 102 f
+    PUSH 109 m
+    PUSH 105 i
+    PUSH 108 l
+    PUSH 102 f
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+  END                              <-print flimflam end
+  DUP 0
+  BEGIN  if flimflam printed then skip the rest.    <-skip check flimflam begin
+    POP      42,1,15,5,3
+    DUP 4    42,1,15,5,3,42
+    DUP 2    42,1,15,5,3,42,5
+    DIV      42,1,15,5,3,8
+    DUP 2    42,1,15,5,3,8,5
+    MUL      42,1,15,5,3,40
+    DUP 5    42,1,15,5,3,40,42
+    NEG      42,1,15,5,3,40,-42
+    ADD      42,1,15,5,3,-2
+    NEG      42,1,15,5,3,2
+    DUP 0    42,1,15,5,3,2,2
+    PUSH 0   42,1,15,5,3,2,2,0
+    LEQ      42,1,15,5,3,2,0
+    BEGIN    42,1,15,5,3,2                            <-print flam begin
+      PUSH 0
+      PUSH 0
+      PUSH 10
+      PUSH 109 m
+      PUSH 97  a
+      PUSH 108 l 
+      PUSH 102 f
+      PRINTC
+      PRINTC
+      PRINTC
+      PRINTC
+      PRINTC
+    END                                             <-print flam end
+    DUP 0
+    BEGIN if flam printed then skip the rest.       <-skip check flam begin
+      POP      42,1,15,5,3
+      DUP 4    42,1,15,5,3,42
+      DUP 1    42,1,15,5,3,42,3
+      DIV      42,1,15,5,3,8
+      DUP 1    42,1,15,5,3,8,3
+      MUL      42,1,15,5,3,40
+      DUP 5    42,1,15,5,3,40,42
+      NEG      42,1,15,5,3,40,-42
+      ADD      42,1,15,5,3,-2
+      NEG      42,1,15,5,3,2
+      DUP 0    42,1,15,5,3,2,2
+      PUSH 0   42,1,15,5,3,2,2,0
+      LEQ      42,1,15,5,3,2,0
+      BEGIN    42,1,15,5,3,2                            <-print flim begin
+        PUSH 0
+        PUSH 0
+        PUSH 0
+        PUSH 10
+        PUSH 109 m
+        PUSH 105 i
+        PUSH 108 l 
+        PUSH 102 f
+        PRINTC
+        PRINTC
+        PRINTC
+        PRINTC
+        PRINTC
+      END                                             <-print flim end
+    DUP 0
+    BEGIN if flim printed then skill the rest
+      DUP 5
+      PRINTI
+      PUSH 10
+      PRINTC
+      PUSH 0
+      PUSH 0
+      PUSH 0
+    END
+  END
+END
+  end of check and print, now to increment and move on to the next number.
+
+POP
+POP
+POP
+POP      1,42
+PUSH -1   1,42,-1
+ADD       1,41
+SWAP 1    41,1
+PUSH 1    41,1,1
+ADD       41,1
+DUP 1     41,1,41
+END 
+
+
+

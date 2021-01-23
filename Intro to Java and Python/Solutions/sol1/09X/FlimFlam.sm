@@ -1,0 +1,118 @@
+--------
+start by copying code from Convert.sm to read a number from stdin 
+PUSH 0       accumulator for the number we're building -- initially 0
+READC        get first character
+DUP 0        check to see if it is newline (10)
+PUSH -10     
+ADD          
+BEGIN        loop as long as not newline
+  PUSH -48   convert ascii digit to integer ('0' = 48)
+  ADD      
+  SWAP 1     accumulator = accumlator*10 + new digit
+  PUSH 10
+  MUL
+  ADD  
+  READC      get next character
+  DUP 0      once again, check for newline
+  PUSH -10
+  ADD
+END
+POP          get rid of last character we read (newline)
+n is now on top of stack
+-----------
+continue by modeling the Java solution in 03X/
+PUSH 1     the int printing flag     stack: n f
+PUSH 1     initial index value              n f i
+DUP 0      compare index                    n f i i
+DUP 3      to n                             n f i i n
+LEQ        
+BEGIN      do loop body only if index <= n   stack: n f i
+  PUSH 1     initialize int printing flag to true   n f i 1
+  SWAP 2                                            n 1 i f
+  POP                                               n 1 i
+
+  should we print "Flim"?   
+  ----------
+  check for divisiblity by 3 (copied from 07X solution)
+  DUP 0  
+  PUSH 3  
+  DUP 1       
+  DUP 1
+  DIV      
+  MUL      
+  NEG      
+  ADD     stack: n 1 i i%3
+  ----------
+  PUSH 1         n 1 i i%3 1
+  SWAP 1         n 1 i 1 i%3
+  LEQ            n 1 i 1<=i%3
+  NOT            n 1 i i%3==0        (since we know i%3 >= 0)
+  BEGIN    do body iff i%3==0   Stack: n 1 i
+    print "Flim"
+    PUSH 70   F
+    PRINTC
+    PUSH 108  l
+    PRINTC
+    PUSH 105  i
+    PRINTC
+    PUSH 109  m
+    PRINTC
+    set printing int flag to false  
+    PUSH 0   stack: n 1 i 0  
+    SWAP 2          n 0 i 1
+    POP             n 0 i
+    PUSH 0   force loop termination      
+  END    
+             stack : n f i
+
+  should we print "Flam"?   
+  ----------
+  check for divisiblity by 5 (copied from 07X solution)
+  DUP 0    
+  PUSH 5  
+  DUP 1       
+  DUP 1       
+  DIV      
+  MUL      
+  NEG      
+  ADD     stack: n 1 i i%5
+  ----------
+  PUSH 1         n 1 i i%5 1
+  SWAP 1         n 1 i 1 i%5
+  LEQ            n 1 i 1<=i%5
+  NOT            n 1 i i%5==0        (since we know i%5 >= 0)
+  BEGIN    do body iff i%5==0    stack: n 1 i
+    print "Flim"
+    PUSH 70   F
+    PRINTC
+    PUSH 108  l
+    PRINTC
+    PUSH 97   a
+    PRINTC
+    PUSH 109  m
+    PRINTC
+    set printing int flag to false  
+    PUSH 0   stack: n 1 i 0  
+    SWAP 2          n 0 i 1
+    POP             n 0 i
+    PUSH 0   force loop ermination      
+  END    
+             stack : n f i
+
+  should we print int?  check the flag
+  DUP 1      stack : n f i f  
+  BEGIN              n f i
+    DUP 0    print i  
+    PRINTI     
+    PUSH 0   force loop termination
+  END        
+  PUSH 10    print newline (10)
+  PRINTC
+             stack:  n f i
+  PUSH 1             n f i 1
+  ADD                n f (i+1)
+  DUP 0              n f (i+1) (i+1)
+  DUP 3              n f (i+1) (i+1) n
+  LEQ       loop condition: if i+1 <= n
+END  
+

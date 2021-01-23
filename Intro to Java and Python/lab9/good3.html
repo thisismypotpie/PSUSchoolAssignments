@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>My Pretty-Printed Mini Program</title>
+<style type="text/css">
+  body     {white-space:pre;
+            background-color:#ffffcc;
+            color:black;
+            font-family:"Lucida Console","Courier New",Monotype}
+  .normalId    {background-color:transparent}
+  .defId       {color:red}
+  .useId       {color:blue}
+  .highlightId {background-color:lightblue}
+</style>
+</head>
+<script language="javascript">
+function change(n,m,s) {
+  elem=document.getElementById("("+n+", "+m+")");
+  elem.className=s;
+}
+function highlightId(n, m) { change(n,m,"highlightId"); }
+function defId(n, m)       { change(n,m,"defId"); }
+function useId(n, m)       { change(n,m,"useId"); }
+function normalId(n, m)    { change(n,m,"normalId"); }
+</script>
+<body>
+boolean <span class="normal" id="(9, 1)" title="(9, 1)" onmouseover="defId(9, 1);highlightId(7, 3);highlightId(6, 2)" onmouseout="normalId(9, 1);normalId(7, 3);normalId(6, 2)">x</span>, <span class="normal" id="(12, 1)" title="(12, 1)" onmouseover="defId(12, 1);highlightId(18, 2)" onmouseout="normalId(12, 1);normalId(18, 2)">y</span>;
+if (<span class="normal" id="(6, 2)" title="(6, 2)" onmouseover="useId(6, 2);highlightId(9, 1)" onmouseout="normalId(6, 2);normalId(9, 1)">x</span> = true||<span class="normal" id="(18, 2)" title="(18, 2)" onmouseover="useId(18, 2);highlightId(12, 1)" onmouseout="normalId(18, 2);normalId(12, 1)">y</span> = true)
+    if (<span class="normal" id="(7, 3)" title="(7, 3)" onmouseover="useId(7, 3);highlightId(9, 1)" onmouseout="normalId(7, 3);normalId(9, 1)">x</span>)
+        print 0;
+    else
+        print 1;
+else
+    ;
+boolean <span class="normal" id="(9, 4)" title="(9, 4)" onmouseover="defId(9, 4);highlightId(7, 6);highlightId(20, 5);highlightId(6, 5)" onmouseout="normalId(9, 4);normalId(7, 6);normalId(20, 5);normalId(6, 5)">x</span>, <span class="normal" id="(12, 4)" title="(12, 4)" onmouseover="defId(12, 4);highlightId(18, 5)" onmouseout="normalId(12, 4);normalId(18, 5)">y</span>;
+if (<span class="normal" id="(6, 5)" title="(6, 5)" onmouseover="useId(6, 5);highlightId(9, 4)" onmouseout="normalId(6, 5);normalId(9, 4)">x</span> = true||<span class="normal" id="(18, 5)" title="(18, 5)" onmouseover="useId(18, 5);highlightId(12, 4)" onmouseout="normalId(18, 5);normalId(12, 4)">y</span> = <span class="normal" id="(20, 5)" title="(20, 5)" onmouseover="useId(20, 5);highlightId(9, 4)" onmouseout="normalId(20, 5);normalId(9, 4)">x</span>)
+    if (<span class="normal" id="(7, 6)" title="(7, 6)" onmouseover="useId(7, 6);highlightId(9, 4)" onmouseout="normalId(7, 6);normalId(9, 4)">x</span>)
+        print 0;
+    else
+        print 1;
+else
+    ;
+
+</body>
+</html>

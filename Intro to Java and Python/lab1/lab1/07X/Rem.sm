@@ -1,0 +1,14 @@
+PUSH 42
+PUSH 5
+DIV
+PUSH 5
+MUL
+PUSH 42
+NEG
+ADD
+NEG
+put your code for remainder (%) in here
+  (note: don't cheat by making use of your knowledge of the specific arguments!)
+PRINTI
+PUSH 10  newline
+PRINTC

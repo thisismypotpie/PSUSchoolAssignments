@@ -1,0 +1,69 @@
+
+PUSH 10
+PUSH 114 r
+PUSH 101 e
+PUSH 98  b
+PUSH 109 m
+PUSH 117 u
+PUSH 110 n 
+PUSH 32
+PUSH 114 r
+PUSH 101 e
+PUSH 116 t
+PUSH 110 n
+PUSH 101 e
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+PRINTC 
+             the follwing code block was taken from Convert.sm in exercise 08.
+PUSH 0       accumulator for the number we're building -- initially 0
+READC        get first character
+DUP 0        check to see if it is newline (10)
+PUSH -10     
+ADD          
+BEGIN        loop as long as not newline
+  PUSH -48   convert ascii digit to integer ('0' = 48)
+  ADD      
+  SWAP 1     accumulator = accumlator*10 + new digit
+  PUSH 10
+  MUL
+  ADD  
+  READC      get next character
+  DUP 0      once again, check for newline
+  PUSH -10
+  ADD
+END
+POP          get rid of last character we read (newline)
+             end of code block takesn from Convert.sm in exercise 08.
+PUSH 1
+SWAP 1
+DUP 0      make a copy for BEGIN to pop and test
+BEGIN      we indent the loop body just to improve readability
+  SWAP 1
+  DUP 0
+  PRINTI   so we can print it
+  PUSH 32  space 
+  PRINTC   print the separator
+  SWAP 1
+  PUSH -1  now decrement index
+  ADD
+  SWAP 1
+  PUSH 1
+  ADD
+  SWAP 1
+  DUP 0    again, make a copy for BEGIN to test
+END        jumps back up to line 3
+we end up here when index counter reaches 0
+PUSH 10    newline
+PRINTC
+

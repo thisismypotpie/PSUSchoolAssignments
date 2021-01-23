@@ -1,0 +1,64 @@
+/*
+Brandon Danielski
+11/4/2016
+CS 163 
+Assigment 3
+This is the Tble ADT.  It is the data stucture that will store video game data into a table.  It will store with an index and can be retrieved by a keyword.
+*/
+#include<iostream>
+#include<cstring>
+#include"table.h"
+using namespace std;
+
+
+
+
+table::table()
+{
+MAX = 101;
+hasher = new node*[MAX];
+for(int i=0; i< MAX;i++)
+{
+*(hasher+i)=NULL;
+}
+}
+
+
+
+
+table::~table()
+{
+delete[] hasher;
+}
+
+int table::insert(game& to_store)
+{
+char* name = new char[2000];
+int index = 0;
+to_store.copy_name(name);
+index=hash_function(name);
+node* new_node = new node();
+new_node->data.copy(to_store);
+new_node->next = *(hasher+index);
+*(hasher+index) = new_node;
+
+if(name)
+{
+delete[] name;
+}
+cout<<"index: "<<index<<endl;
+return index;
+}
+
+
+
+
+int table::hash_function(char* key)
+{
+ int sum = 0;
+ for(int i=0;i<MAX; i++)
+ {
+    sum  = sum + *(hasher + i);   
+ }
+ return sum%MAX;
+}

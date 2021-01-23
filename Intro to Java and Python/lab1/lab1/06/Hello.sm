@@ -1,0 +1,27 @@
+PUSH 72   72 stands for H
+PRINTC
+PUSH 101  101 stands for e
+PRINTC
+PUSH 108  l
+DUP 0
+PRINTC
+PRINTC
+PUSH 111  o
+PRINTC
+PUSH 32   space
+PRINTC
+Let's do things backwards for a change!
+PUSH 33 !
+PUSH 100 d
+PUSH 108 l
+PUSH 114 r
+PUSH 111 o
+PUSH 87  W
+PRINTC
+PRINTC
+PRINTC
+PRINTC
+PRINTC
+PRINTC
+PUSH 10 \n
+PRINTC

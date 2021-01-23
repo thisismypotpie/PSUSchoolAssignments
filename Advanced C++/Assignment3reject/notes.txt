@@ -1,0 +1,10 @@
+Current OBjective: I am creating the contructors and destructors of each form on contact, one completed they need to be tested to make sure they all work.
+CurrentObjective:  still creating all contuctors and destuctors.
+Current Objective: I just made the main menu so now what I need to do is add operator overloading to the neccessary functions.
+Curret Objective: I am working on operator overloading for the person class.  I need to be able to use the += opearotr to add people to the tree however I need to get the + operator working for the person class before I can have that working.  I will also need to do some work along the road for overloading the operators for contact class and its derived classes.
+Current Objective: I am working on applying operator overloading to getting data from the external datafile.  SO far I am workig on the phone class and have implmented a test.  I get a seg fualt so i need to find out where it is coming from.
+Current Objective: I am working on the add to tree function in the tree.cpp file. I have made a new person node and now I need to find a way to compare the new node to the list of each tree node to add to the tree.
+Current Objective: I am working on the recursice function for adding a new person node to a tree.
+Current Objecive: I am creating a the overloaded operators for the tree class.
+Currnet Objective: I am having trouble with adding new tree nodes to the tre.
+Current Objective: I am changing everything from null to new to see if root can be successfully stored into the tree.  Check also for seeing if root potenials are being stored into an invalid pointer.

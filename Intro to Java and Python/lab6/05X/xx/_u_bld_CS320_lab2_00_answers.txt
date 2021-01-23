@@ -1,0 +1,10 @@
+Here are some possible answers:
+
+(a) Non-empty strings over the alphabet {a,b} beginning and ending with the same letter.
+
+(b) Strings over the alphabet {a,b} having even length.
+
+(c) Java-style identifiers (from lecture slide 19).
+
+(d) Java keywords used in statements.
+

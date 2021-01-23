@@ -1,0 +1,6 @@
+PUSH 0
+BEGIN
+  PUSH 42
+  PRINTI
+  
+  

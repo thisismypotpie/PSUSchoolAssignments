@@ -1,0 +1,5 @@
+Java:
+When encountering an overflow error, while there is indeed an exception thrown.  The behavior of an overflow is already a defined behavior, when exeeding he maximum number 32 bits can provide, the number wrapps around to the lowest possible number that can be provided, it does the opposite as well. If you were to put a number lower than the lowest number, you would get the highest number as a wrap around.
+
+C++/C:
+Since the overflow error behavior is not expected to be defined at runtime we end up with an undefined behavior. What I experienced here was an abort rather than an attempt to handle the excpetion.

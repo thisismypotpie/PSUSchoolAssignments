@@ -1,0 +1,16 @@
+OCTOBER 10TH, 2016
+- Last time I was working I rand into a problem where I input a number that is on the list and for some reason it says the number I input is not on the list.  I think it could be a problem with app since app checks the number entered before throwing an error.  After this is fixed move on to the traverse node function in linkedlist.cpp.
+
+- Error mentioned in entry one was fixed, the if statement was not correct.  Moving on to traverse node function.
+
+- I am trying to find the best way to pass the node the user wants to look at from the list to main and then to the app and I reember Karla said to avoid passing entire objects.  i want to use passing by referene but I am unfamiliar with passing by reference, at leas to the point at which I am comfortable so I am going to watch some tutorials on how the difference between passing by reference and by value and determine the best course of action afterward.
+
+- I found the difference between passing by reference and passing by value.  when you pas by refence you can make changes what you pass that affects the original versus passing by value where what you pass will not affect thte orginal if altered in any way.
+
+- If something goes wrong in app.cpp I deleted some brackets around an else statement around line 55.
+
+-Before Logging off I am at the part where I m trying to add a new node to the list.  I think I will do this by creating a new node and passing it by reference to a function in app that will change it and then store it in the lsit afterward.  Right now I am burned out nd need a break.
+
+- I am trying to think of how to add data into a new tutor before sending it to the list.  i was thinking of creating several different functions to return each piece of information at a time but I think there is a more effecient way to do it, I am just too tired to think of it.  Other than that I just need to create the funtions for deleteing anything from the list that is 3 stars and below and also creating a function that only displays things rated 8 and up.
+
+- I am setting up a more organized menu system.  There is a main menu with four option, a second menu with three options, and a third menu with two options.  The second and their menu or only available by selecting to view the list in the first menu.  Right now I am hooking up the first option of the first menu.  I am on the second menu and changed the name of intro2() to choosingAnItem(). It will take a number and find it in the list.  It no longer takes zero as an option.  So far I am at the point specifically where I am hooking up the first option of the second menu which is to pick an item.  After that hook up the options for the third menu which is only available by clicking the fist option of the second menu.

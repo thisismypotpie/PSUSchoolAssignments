@@ -1,0 +1,17 @@
+10/15/2016 9:57PM: I have solved the error with the stack constructor by switching the storage operator from = to strcpy.  I am beginning on a function that will add a stop to the trip.  On the next session start by copy/pasting the loop and switich it out for state, lodging, etc.  We need to add to the tripPlan ADT two more things, how much was spent on gas and the rating of the lodging. We wont need these until later. Also begin to create the queue ADT when the loops for user input for new stops are completed.
+
+10/16/2016 6:49PM: I have been working on the stack to create the pop function. I need to complete the stack and re-create the menu system in main.
+
+10/18/2016 8:37PM: I have started work on the queue of the progject.  I am hving a segmentation fault on the enqueue function where rear is null and the first node is created.  It might be that I havent assigned rear but I dont remember if I did or not, chek that first.
+
+10/20/2016 5:18PM: I have solved the errors regarding queue.  I am working on the display all function for it and I am having a problem with displaying the name of the trip.  I made a new function to copy the name of the trip into a local array but it didnt work.  Work on that next time.
+
+10/20/2016 6:01PM: I have all of the queue finished, I am trying to get option one of the new menu started however I am having trouble with getting the new tripPlan to store informatin fow ehn I ask to see all of the stops I get that no information was storted in the class.
+
+10/21/2016 9:52AM: I hav found a solution to the problem with adding a new trip to the queue.  When I open the app I want the trip to be named first and then add stops so the user does not have to enter the trip name for all of their stops.  i made a new function in app.cpp just for that, it will be placed in main as soon as I fix the minor error associated with it at the moment.
+
+10/23/2016 5:06PM: I am working on the function for actually taking the trip.  Right now I have trouble copying the information inputted by the user about gas and rating into each tripPlan ADT as the trip progresses.  I was thinking of the queue peek allowing for a tripPlan pointer to be entered as an agrument and then we can modify from there.  If the list is empty then I can also check to see if the tripPlan pointer retrieved from peek is NULL and then begin the return trip after that.
+
+10/24/2016 7:44PM: I have completed the hardest part of the program, I just need to do some testing and delete the output lines where needed.  After that I will write the effeciency write up.  I also need to create and implement the destructors for all of the ADT's and the app.
+
+10/25/2016 9:52PM: I have completed the program to the best of my abilities and will now write the header comments and effeciency write up.

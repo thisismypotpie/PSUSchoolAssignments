@@ -1,0 +1,5 @@
+Current Task:  I am trying to finish the funciton that writes to the external data files.  So far I have completed the one for the location file but it is untested.  I also need to add the implementation to the app class.
+
+current Task:  I am haing trouble with taking a streetcar offline with a line.  The function completes but then terminated the program.  I need to see if the app does not recall the menu function or if there is some other reason that ths is not working.
+
+Current Task: i now needs to move the steetcars from stop to stop.  I am trying to move all streetcars however there is an array index off by one error I am getting but I cannot find out where.

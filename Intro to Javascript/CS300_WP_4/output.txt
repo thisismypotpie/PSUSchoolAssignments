@@ -1,0 +1,78 @@
+Test Run #1
+Test Run #1 has passed.
+Test Run #2
+Test Run #2 has passed.
+Test Run #3
+Test Run #3 has passed.
+Test Run #4
+Test Run #4 has passed.
+Test Run #5
+Test Run #5 has passed.
+Test Run #6
+Test Run #6 has failed.
+Expected:
+20	Out	GR	12368	470	12838
+Result:
+20	Out	GR	12600	470	13070
+Test Run #7
+Test Run #7 has failed.
+Expected:
+20	In	GR	7208	470	7678
+Result:
+20	In	GR	8280	470	8750
+Test Run #8
+Test Run #8 has passed.
+Test Run #9
+Test Run #9 has passed.
+Test Run #10
+Test Run #10 has passed.
+Test Run #11
+Test Run #11 has passed.
+Test Run #12
+Test Run #12 has passed.
+Test Run #13
+Test Run #13 has passed.
+Test Run #14
+Test Run #14 has failed.
+Expected:
+8	In	GR	3312	463	3375
+Result:
+8	In	GR	3312	378.5	3690.5
+Test Run #15
+Test Run #15 has passed.
+Test Run #16
+Test Run #16 has failed.
+Expected:
+8	Out	GR	5040	463	5503
+Result:
+8	Out	GR	5040	378.5	5418.5
+Test Run #17
+Test Run #17 has passed.
+Test Run #18
+Test Run #18 has failed.
+Expected:
+18	In	GR	6648	470	7718
+Result:
+18	In	GR	7452	470	7922
+Test Run #19
+Test Run #19 has passed.
+Test Run #20
+Test Run #20 has failed.
+Expected:
+18	Out	GR	11166	470	11636
+Result:
+18	Out	GR	11340	470	11810
+Test Run #21
+Test Run #21 has passed.
+Test Run #22
+Test Run #22 has passed.
+Test Run #23
+Test Run #23 has passed.
+Test Run #24
+Test Run #24 has passed.
+Test Run #25
+Test Run #25 has failed.
+Expected:
+100	Out	GR	60448	470	60918
+Result:
+100	Out	GR	63000	470	63470

@@ -1,0 +1,14 @@
+Giving an input a = 2000000000 causes the calculation of b to provoke
+a signed integer overflow.
+
+In Java, this wraps around to the value -294967296, which is then
+compared to a, producing the correct result.
+
+In C++, this is an UB, so the output can legally be anything.
+Equivalently, the C++ is allowed to assume that overflow never
+happens. With -O0, the wraparound result is computed and compared just
+as in Java, producing the same output.  But under -O2, the C++
+compiler reasons that, in the absence of overflow, b is _always_
+greater than a, so the 'if' test can be removed and code is generated
+for just the true branch, resulting in the apparently non-sensical
+output.

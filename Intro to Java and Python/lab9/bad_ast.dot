@@ -1,0 +1,29 @@
+digraph AST {
+node [shape=box style=filled fontname=Courier];
+0[label="Block" fillcolor="lightblue"];0 -> 1[label=" 0", fontcolor="gray"];
+1[label="VarDecl\n(1, 1)" fillcolor="lightblue"];1 -> 2[label=" type", fontcolor="gray"];
+2[label="boolean" fillcolor="lightblue"];1 -> 3[label=" 0", fontcolor="gray"];
+3[label="Id(\"i\")\n(9, 1)" fillcolor="lightsalmon"];0 -> 4[label=" 1", fontcolor="gray"];
+4[label="ExprStmt\n(1, 2)" fillcolor="lightblue"];4 -> 5[label=" exp", fontcolor="gray"];
+5[label="Assignment\n(3, 2)" fillcolor="lightsalmon"];5 -> 6[label=" lhs", fontcolor="gray"];
+6[label="Id(\"i\")\n(1, 2)" fillcolor="lightsalmon"];5 -> 7[label=" rhs", fontcolor="gray"];
+7[label="IntLit(1)\n(5, 2)" fillcolor="lightsalmon"];0 -> 8[label=" 2", fontcolor="gray"];
+8[label="VarDecl\n(1, 4)" fillcolor="lightblue"];8 -> 9[label=" type", fontcolor="gray"];
+9[label="int" fillcolor="lightblue"];8 -> 10[label=" 0", fontcolor="gray"];
+10[label="Id(\"a\")\n(5, 4)" fillcolor="lightsalmon"];0 -> 11[label=" 3", fontcolor="gray"];
+11[label="ExprStmt\n(1, 5)" fillcolor="lightblue"];11 -> 12[label=" exp", fontcolor="gray"];
+12[label="Eql\n(3, 5)" fillcolor="lightsalmon"];12 -> 13[label=" left", fontcolor="gray"];
+13[label="Id(\"a\")\n(1, 5)" fillcolor="lightsalmon"];12 -> 14[label=" right", fontcolor="gray"];
+14[label="BoolLit(true)\n(6, 5)" fillcolor="lightsalmon"];0 -> 15[label=" 4", fontcolor="gray"];
+15[label="ExprStmt\n(1, 6)" fillcolor="lightblue"];15 -> 16[label=" exp", fontcolor="gray"];
+16[label="Assignment\n(3, 6)" fillcolor="lightsalmon"];16 -> 17[label=" lhs", fontcolor="gray"];
+17[label="Id(\"a\")\n(1, 6)" fillcolor="lightsalmon"];16 -> 18[label=" rhs", fontcolor="gray"];
+18[label="BoolLit(true)\n(5, 6)" fillcolor="lightsalmon"];0 -> 19[label=" 5", fontcolor="gray"];
+19[label="If\n(1, 7)" fillcolor="lightblue"];19 -> 20[label=" test", fontcolor="gray"];
+20[label="LAnd\n(6, 7)" fillcolor="lightsalmon"];20 -> 21[label=" left", fontcolor="gray"];
+21[label="Id(\"a\")\n(4, 7)" fillcolor="lightsalmon"];20 -> 22[label=" right", fontcolor="gray"];
+22[label="Id(\"i\")\n(9, 7)" fillcolor="lightsalmon"];19 -> 23[label=" ifTrue", fontcolor="gray"];
+23[label="Block" fillcolor="lightblue"];19 -> 24[label=" ifFalse", fontcolor="gray"];
+24[label="Empty\n(1, 12)" fillcolor="lightblue"];0 -> 25[label=" 6", fontcolor="gray"];
+25[label="Print\n(1, 12)" fillcolor="lightblue"];25 -> 26[label=" exp", fontcolor="gray"];
+26[label="Id(\"i\")\n(7, 12)" fillcolor="lightsalmon"];}

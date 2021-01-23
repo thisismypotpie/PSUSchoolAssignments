@@ -1,0 +1,20 @@
+PUSH 10     Limit value n: the rest of the code should work for any value here, not just 10
+--- SOLUTION STARTS HERE
+PUSH 1      Initial index value = 1     stack: n i
+DUP 0       Calculate i<=n                     n i i
+DUP 2                                          n i i n
+LEQ                                            n i i<=n
+BEGIN       Loop while i<= n   
+  DUP 0        Output i                        n i i
+  PRINTI                                       n i 
+  PUSH 32      Output space                    n i 10
+  PRINTC                                       n i 
+  PUSH 1       Update index                    n i 1
+  ADD                                          n i    where  i = old_i + 1
+  DUP 0        Calculate i<=n                  n i i 
+  DUP 2                                        n i i n
+  LEQ                                          n i i<=n
+END
+POP        Cleanup stack (optional)            n
+PUSH 10    Output newline
+PRINTC

@@ -1,0 +1,11 @@
+Current Objective: I have created a prototype for adding info to the popularity list, now I need to actually implement the function in the transport.cpp file.
+
+Current Objective: I need to create a constructor and destructor for the rider class.  I am beginning to tie functions into the app and with that I need to create the final functions for rider in order for the app to use the rider functions.
+
+Current Objctive: i need to create an app addition to get info for adding to rider history.
+
+Current Objective: Now that the transport class has been close to corrected, I need to implement the add data function to the add popularity info function and then test to make sure the data is being placed correctly.
+
+Current Objective: I need to fix the display pop list.
+
+Current Objective: I need to fix the display history function by taking a look at teh get ride from history functin.

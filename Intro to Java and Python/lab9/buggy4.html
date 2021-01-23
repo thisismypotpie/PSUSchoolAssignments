@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>My Pretty-Printed Mini Program</title>
+<style type="text/css">
+  body     {white-space:pre;
+            background-color:#ffffcc;
+            color:black;
+            font-family:"Lucida Console","Courier New",Monotype}
+  .normalId    {background-color:transparent}
+  .defId       {color:red}
+  .useId       {color:blue}
+  .highlightId {background-color:lightblue}
+</style>
+</head>
+<script language="javascript">
+function change(n,m,s) {
+  elem=document.getElementById("("+n+", "+m+")");
+  elem.className=s;
+}
+function highlightId(n, m) { change(n,m,"highlightId"); }
+function defId(n, m)       { change(n,m,"defId"); }
+function useId(n, m)       { change(n,m,"useId"); }
+function normalId(n, m)    { change(n,m,"normalId"); }
+</script>
+<body>
+int <span class="normal" id="(5, 1)" title="(5, 1)" onmouseover="defId(5, 1)" onmouseout="normalId(5, 1)">x</span>;
+print 12;
+
+</body>
+</html>

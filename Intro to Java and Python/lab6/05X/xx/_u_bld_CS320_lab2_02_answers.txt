@@ -1,0 +1,99 @@
+Possible solutions (where we write e for epsilon)
+
+(a)  String: ab     Tree:    S
+                            /|\
+                           a B S
+                             | |
+                             b e
+
+     String: aabb   Tree:    S
+                            /|\
+			   a B S
+		            /|\ \ 
+			   a B B e
+			     | |
+			     b b
+
+(b) String: true & true # true     Trees:       B                B
+                                               /|\              /|\
+    (writing t for true)                      B # B            B & B
+					     /|\  |            |  /|\
+					    B & B t            t B # B
+					    |   |                |   |
+					    t   t                t   t
+
+
+    String: ! true & true         Trees:        B                B
+                                               /|\              /|
+                                              B & B            ! B
+                                             /|   |             /|\
+					    ! B   t            B & B
+					      |                |   |
+					      t                t   t
+
+(c) String: true & true # true     Tree:        B  
+                                               /|\ 
+                                              B # A
+                                              |   |
+                                              A   P
+					     /|\  |
+					    A & P t
+					    |   | 
+					    P   t  
+                                            |
+                                            t
+
+   String: ! true & true          Tree:        B
+                                               |
+					       A
+					      /|\
+					     A & P
+					     |   |
+					     P   t
+					    /|
+					   ! P
+					     |
+					     t
+
+(d)  String: if e then if e then other else other
+
+Two left-most deriviations:
+
+S
+-> if e then S else S
+-> if e then if e then S else S
+-> if e then if e then other else S
+-> if e then if e then other else other
+
+S
+-> if e then S
+-> if e then if e then S else S
+-> if e then if e then other else S
+-> if e then if e then other else other
+
+
+(e)  
+
+The result of the algorithm looks like this:
+
+S1 -> S2 S3
+S2 -> S4 S5
+S3 -> b
+S4 -> a
+S5 -> S6 S5 | e         (e = epsilon)
+S6 -> S7 S8
+S7 -> b
+S8 -> a
+
+This can be simplified to:
+
+S -> aTb
+T -> baT | e
+
+A left-most derivation for ababab in the simplified grammar is:
+
+S
+-> aTb
+-> abaTb
+-> ababaTb
+-> ababab

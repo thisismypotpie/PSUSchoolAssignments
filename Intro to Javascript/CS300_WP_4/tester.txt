@@ -1,0 +1,327 @@
+#!/bin/bash
+
+echo "Test Run #1"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_1.txt >temp
+cmp -s temp gold_files/gold_file_1.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #1 has passed."
+else
+	echo "Test Run #1 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_1.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #2"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_2.txt >temp
+cmp -s temp gold_files/gold_file_2.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #2 has passed."
+else
+	echo "Test Run #2 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_2.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #3"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_3.txt >temp
+cmp -s temp gold_files/gold_file_3.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #3 has passed."
+else
+	echo "Test Run #3 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_3.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #4"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_4.txt >temp
+cmp -s temp gold_files/gold_file_4.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #4 has passed."
+else
+	echo "Test Run #4 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_4.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #5"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_5.txt >temp
+cmp -s temp gold_files/gold_file_5.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #5 has passed."
+else
+	echo "Test Run #5 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_5.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #6"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_6.txt >temp
+cmp -s temp gold_files/gold_file_6.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #6 has passed."
+else
+	echo "Test Run #6 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_6.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #7"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_7.txt >temp
+cmp -s temp gold_files/gold_file_7.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #7 has passed."
+else
+	echo "Test Run #7 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_7.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #8"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_8.txt >temp
+cmp -s temp gold_files/gold_file_8.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #8 has passed."
+else
+	echo "Test Run #8 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_8.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #9"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_9.txt >temp
+cmp -s temp gold_files/gold_file_9.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #9 has passed."
+else
+	echo "Test Run #9 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_9.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #10"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_10.txt >temp
+cmp -s temp gold_files/gold_file_10.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #10 has passed."
+else
+	echo "Test Run #10 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_10.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #11"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_11.txt >temp
+cmp -s temp gold_files/gold_file_11.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #11 has passed."
+else
+	echo "Test Run #11 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_11.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #12"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_12.txt >temp
+cmp -s temp gold_files/gold_file_12.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #12 has passed."
+else
+	echo "Test Run #12 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_12.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #13"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_13.txt >temp
+cmp -s temp gold_files/gold_file_13.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #13 has passed."
+else
+	echo "Test Run #13 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_13.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #14"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_14.txt >temp
+cmp -s temp gold_files/gold_file_14.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #14 has passed."
+else
+	echo "Test Run #14 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_14.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #15"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_15.txt >temp
+cmp -s temp gold_files/gold_file_15.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #15 has passed."
+else
+	echo "Test Run #15 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_15.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #16"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_16.txt >temp
+cmp -s temp gold_files/gold_file_16.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #16 has passed."
+else
+	echo "Test Run #16 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_16.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #17"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_17.txt >temp
+cmp -s temp gold_files/gold_file_17.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #17 has passed."
+else
+	echo "Test Run #17 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_17.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #18"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_18.txt >temp
+cmp -s temp gold_files/gold_file_18.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #18 has passed."
+else
+	echo "Test Run #18 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_18.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #19"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_19.txt >temp
+cmp -s temp gold_files/gold_file_19.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #19 has passed."
+else
+	echo "Test Run #19 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_19.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #20"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_20.txt >temp
+cmp -s temp gold_files/gold_file_20.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #20 has passed."
+else
+	echo "Test Run #20 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_20.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #21"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_21.txt >temp
+cmp -s temp gold_files/gold_file_21.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #21 has passed."
+else
+	echo "Test Run #21 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_21.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #22"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_22.txt >temp
+cmp -s temp gold_files/gold_file_22.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #22 has passed."
+else
+	echo "Test Run #22 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_22.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #23"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_23.txt >temp
+cmp -s temp gold_files/gold_file_23.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #23 has passed."
+else
+	echo "Test Run #23 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_23.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #24"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_24.txt >temp
+cmp -s temp gold_files/gold_file_24.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #24 has passed."
+else
+	echo "Test Run #24 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_24.txt
+	echo "Result:"
+	cat temp
+fi
+echo "Test Run #25"
+./../../../u/cgi_web/Tuition/cost <test_files/test_file_25.txt >temp
+cmp -s temp gold_files/gold_file_25.txt
+if [ $? -eq 0 ];
+then
+	echo "Test Run #25 has passed."
+else
+	echo "Test Run #25 has failed."
+	echo "Expected:"
+	cat gold_files/gold_file_25.txt
+	echo "Result:"
+	cat temp
+fi

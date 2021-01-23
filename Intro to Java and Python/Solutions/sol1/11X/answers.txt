@@ -1,0 +1,32 @@
+Here are possible answers, obtained partly with the help of the test programs in this directory.
+
+(a)
+
+Error kind 1: Interpreter raises uncaught ArrayIndexOutOfBoundsException accessing the stack.
+
+Error kind 2: Interpreter does nothing! The stack pointer is allowed to go negative.
+              (Future attempts to access stack elements may fail unless something is pushed on first.)
+
+Error kind 3: Interpreter behavior depends on whether the loop body is executed.
+              If it is, control will simply fall of the end of the program without an error being raised.
+	      If it is not, the interpreter will raise ArrayIndexOutOfBoundsException on the code array.
+
+Error kind 4: Interpreter does not detect this error, because it treats the misspelled opcode as a comment.
+
+Error kind 5: Interpreter raises uncaught NumberFormatException trying to convert the parameter into an integer.
+
+(b)
+
+Error kind 1: Error is detected at stage C; running Java code raises
+              uncaught ArrayIndexOutOfBoundsException accessing the stack.
+
+Error kind 2: Error is not detected. Once again, stage C errors may occur later.
+
+Error kind 3: Error is detected as stage B: attempting to compile the Foo.java file will
+              cause a parsing error because a closing '}' is missing.
+
+Error kind 4: Error is not detected, because compiler treats the misspelled opcode as a comment.
+
+Error kind 5: Error is detected at stage A: attempting to compile the SM file raises uncaught
+              NumberFormatException trying to convert the parameter into an integer.
+

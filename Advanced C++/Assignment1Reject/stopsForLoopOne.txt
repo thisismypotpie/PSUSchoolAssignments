@@ -1,0 +1,81 @@
+Loop One
+1
+Middle Man Road
+Westbound
+0
+2
+Over There Sqaure
+Westbound
+0
+3
+Sassy St.
+Westbound
+0
+4
+Noogle Ave.
+Westbound
+0
+5
+Scwag St.
+Westbound
+0
+6
+Jones Sausage Rd.
+Southbound
+0
+7
+Jiminy Jillikers Jct.
+Southbound
+0
+8
+Dead Man's Ditch
+Southbound
+0
+9
+The Great Bambooy Rd.
+SouthBound
+0
+10
+Fwoosh Bowl Blvd.
+Southbound
+0
+11
+Turtle Jerky Terrace
+Eastbound
+0
+12
+Old Man Jenkins Way
+Eastbound
+0
+13
+We Cant See St.
+Eastbound
+0
+14
+Feet St.
+Eastbound
+0
+15
+Neat St.
+Eastbound
+0
+16
+Kiwi Ln.
+Northbound
+0
+17
+Not Diagon Alley
+Northbound
+0
+18
+Where are we Ave.
+Northbound
+0
+19
+Wheat St.
+Northbound
+0
+20
+Middle Man Rd.
+Northbound
+0

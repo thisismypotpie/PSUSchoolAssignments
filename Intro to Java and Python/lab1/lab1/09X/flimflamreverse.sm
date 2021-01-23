@@ -1,0 +1,128 @@
+PUSH 1
+READC
+DUP 0
+BEGIN
+SWAP 1
+PUSH 15 
+PUSH 5
+PUSH 3
+  DUP 4   42,1,15,5,3,42
+  DUP 3   42,1,15,5,3,42,15
+  DIV     42,1,15,5,3,2 
+  DUP 3   42,1,15,5,3,2,15
+  MUL     42,1,15,5,3,30
+  DUP 5   42,1,15,5,3,30,42
+  NEG     42,1,15,5,3,30,-42
+  ADD     42,1,15,5,3,-12
+  NEG     42,1,15,5,3,12
+  DUP 0   42,1,15,5,3,12,12
+  PUSH 0  42,1,15,5,3,12,12,0
+  LEQ     42,1,15,5,3,12,0
+  BEGIN   42,1,15,5,3,12,         <-print flimflam begin
+    PUSH 0 42,1,15,5,3,12,0
+    PUSH 10
+    PUSH 109 m
+    PUSH 97  a
+    PUSH 108 l 
+    PUSH 102 f
+    PUSH 109 m
+    PUSH 105 i
+    PUSH 108 l
+    PUSH 102 f
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+    PRINTC
+  END                              <-print flimflam end
+  DUP 0
+  BEGIN  if flimflam printed then skip the rest.    <-skip check flimflam begin
+    POP      42,1,15,5,3
+    DUP 4    42,1,15,5,3,42
+    DUP 2    42,1,15,5,3,42,5
+    DIV      42,1,15,5,3,8
+    DUP 2    42,1,15,5,3,8,5
+    MUL      42,1,15,5,3,40
+    DUP 5    42,1,15,5,3,40,42
+    NEG      42,1,15,5,3,40,-42
+    ADD      42,1,15,5,3,-2
+    NEG      42,1,15,5,3,2
+    DUP 0    42,1,15,5,3,2,2
+    PUSH 0   42,1,15,5,3,2,2,0
+    LEQ      42,1,15,5,3,2,0
+    BEGIN    42,1,15,5,3,2                            <-print flam begin
+      PUSH 0
+      PUSH 0
+      PUSH 10
+      PUSH 109 m
+      PUSH 97  a
+      PUSH 108 l 
+      PUSH 102 f
+      PRINTC
+      PRINTC
+      PRINTC
+      PRINTC
+      PRINTC
+    END                                             <-print flam end
+    DUP 0
+    BEGIN if flam printed then skip the rest.       <-skip check flam begin
+      POP      42,1,15,5,3
+      DUP 4    42,1,15,5,3,42
+      DUP 1    42,1,15,5,3,42,3
+      DIV      42,1,15,5,3,8
+      DUP 1    42,1,15,5,3,8,3
+      MUL      42,1,15,5,3,40
+      DUP 5    42,1,15,5,3,40,42
+      NEG      42,1,15,5,3,40,-42
+      ADD      42,1,15,5,3,-2
+      NEG      42,1,15,5,3,2
+      DUP 0    42,1,15,5,3,2,2
+      PUSH 0   42,1,15,5,3,2,2,0
+      LEQ      42,1,15,5,3,2,0
+      BEGIN    42,1,15,5,3,2                            <-print flim begin
+        PUSH 0
+        PUSH 0
+        PUSH 0
+        PUSH 10
+        PUSH 109 m
+        PUSH 105 i
+        PUSH 108 l 
+        PUSH 102 f
+        PRINTC
+        PRINTC
+        PRINTC
+        PRINTC
+        PRINTC
+      END                                             <-print flim end
+    DUP 0
+    BEGIN if flim printed then skill the rest
+      DUP 5
+      PRINTI
+      PUSH 10
+      PRINTC
+      PUSH 0
+      PUSH 0
+      PUSH 0
+    END
+  END
+END
+  end of check and print, now to increment and move on to the next number.
+
+POP
+POP
+POP
+POP      42,1
+PUSH 1   42,1,1
+ADD      42,2
+SWAP 1   2,42
+PUSH -1  2,42,-1
+ADD      2,41
+DUP 0
+END 
+
+
+

@@ -1,0 +1,29 @@
+Put your answers in this file.
+
+(a)
+S -> A*B*
+* -> A*B* | e (where e is epsilon)
+A-> (
+B-> )
+
+The limited number of rules dictated minimize the chance of ambiguity.  In this case the first two rules allow for any number of open and close parenthesis, where A and B are the open and close parenthesis. All that can be done is to map out the appropriate number of times to use A*B* and then apply the appropriate number of A's and B's, there is no other way to perform the same task given this set of rules.
+
+(b)
+
+E-> E+P
+E->P
+P->P*X
+P->^
+^->P*P*A
+^->A
+A->(E)
+A->n
+
+Since we already have an multiplier operator rather than called ^*^ I wanted to called P*P as calling ^*^ would be ambiguous as you could acheive the same result through P. That is why I had P*P in my ^ rules because then there is still only one way to get the exponentation.
+
+(c)
+S -> A; | ;
+A -> nB
+B -> ,A | e (where e is epsilon)
+
+The first line serves in the case of there are no n's in which case a ';' is accepted or if there will be some n's followed by a ';'. Case A serves for if there is a least one n.  B will either add a comma and then have A add another n or there will be nothing when we need to go back to S and add a ';'. There are no other options as to how this can be done.

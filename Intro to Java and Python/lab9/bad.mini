@@ -1,0 +1,13 @@
+boolean i;
+i = 1;
+
+int a;
+a == true;
+a = true;
+if(a && i)
+{
+
+}
+
+print i;
+ 

@@ -1,0 +1,14 @@
+PUSH 10    initialize index counter to 10
+DUP 0      make a copy for BEGIN to pop and test
+BEGIN      we indent the loop body just to improve readability
+  DUP 0    copy index counter  
+  PRINTI   so we can print it
+  PUSH 32  space 
+  PRINTC   print the separator
+  PUSH -1  now decrement index
+  ADD
+  DUP 0    again, make a copy for BEGIN to test
+END        jumps back up to line 3
+we end up here when index counter reaches 0
+PUSH 10    newline
+PRINTC

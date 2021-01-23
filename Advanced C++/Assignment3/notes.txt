@@ -1,0 +1,5 @@
+current objective: I am trying to keep what i can from the last project starting with the tree classes, I am going to scrap all that is not needed for now and create a new tree from scratch.
+current objective: with the contact types complete I need to be able to store them into the perosn class next.
+current objective: I have created a function to load data from the file to the tree and I just need to debug it and get rid of any memory leaks.  Ther main problem is the 0 element getting overwritten in the end of the function.
+current objective: Create a outfile for the tree to put data into the text file.
+current objective: finish the search function, get the bugs out of the insert function, do the operator overloads, finish this damn thing.

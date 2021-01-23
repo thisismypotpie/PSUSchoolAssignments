@@ -1,0 +1,7 @@
+program to compute and print the value 42
+PUSH 6   
+PUSH 7
+MUL
+PRINTI
+PUSH 10     this is the ascii code for '\n' i.e. newline
+PRINTC 

@@ -1,0 +1,111 @@
+Sample solution.  Timings are on a 1.8GHz MacBook Air.
+
+Claim 1. For arrays, prepending is much slower than appending.
+
+Experimental parameters:
+
+(a)  array 10000 500 0 0
+(b)  array 10000 0 500 0
+
+Rationale: In (a) we do only appends; in (b) we do only prepends. If the claim is true, we expect (a) to be much
+faster than (b).
+
+Timings (user+sys):
+
+(a) 0.238s
+(b) 0.531s
+
+Analysis: (b) is about twice as slow as (a).  This does not support the claim very well; a 2X factor is not "much" slower.
+However, if we adjust the experiment to perform larger numbers of operations, a much clearer pattern emerges:
+
+Parameters:
+(c) array 10000 1000 0 0 
+(d) array 10000 0 1000 0
+(e) array 10000 2000 0 0
+(f) array 10000 0 2000 0
+
+Timings:
+
+(c) 0.292s
+(d) 1.200s
+(e) 0.403s
+(f) 3.924s
+
+Now (d) is about 4X slower than (c), and (f) is about 10X slower than (e).  We can now say with some confidence that
+if the size of the sequence becomes sufficiently large, prepending becomes much slower than appending.
+
+--------------------
+
+Claim 2: For lists, prepending and appending are roughly the same speed.
+
+Experimental parameters:
+
+(a)  list 10000 2000 0 0
+(b)  list 10000 0 2000 0
+
+Rationale: In (a) we do only appends; in (b) we do only prepends. If the claim is true, we expect (a) and (b)
+to have roughly the same times.  Based on our expeirence with Claim 1, we use a fairly large value for the number
+of append/prepends to do. 
+
+Timings (user+sys):
+
+(a) 0.560s
+(b) 0.491s
+
+Analysis: These times are indeed roughly equal, thus supporting the claim.
+
+--------------------
+
+Claim 3: Prepending is much faster in the list implementation than in the array implementation.
+
+Experimental parameters:
+
+(a)  list 10000 0 2000 0
+(b)  array 10000 0 2000 0
+
+Rationale: We do only prepends, in equal numbers, for each implementation.  If the claim is true, (a) should be much faster than (b).  Again, we choose a fairly large number of operations.
+
+Timings (user+sys):
+
+(a) 0.459s
+(b) 3.942s
+
+Analysis: (a) is about 8X faster than (b), supporting the claim.  (Again, if we did, say, 500 operations instead of
+2000, the difference would be much smaller.)
+
+--------------------
+
+Claim 4: Appending is roughly the same speed in the two implementations.
+
+Experimental parameters:
+
+(a)  list 10000 2000 0 0
+(b)  array 10000 2000 0 0
+
+Rationale: We do only appends, in equal numbers, for each implementation.  If the claim is true, (a) and (b) should be roughly
+the same speed.  Again, we choose a fairly large number of operations.
+
+Timings (user+sys):
+
+(a) 0.454s
+(b) 0.363s
+
+Analysis: (a) is about 25% slower than (b), but they seem close enough to support the claim. However, we might wonder
+what happens if we increase the operation count significantly:
+
+Parameters:
+
+(c) list 10000 10000 0 0 
+(d) array 10000 10000 0 0
+
+Timings (user+sys):
+
+(c) 1.581s
+(d) 0.853s
+
+Now (c) is about twice as slow as (d).  This suggests that the claim is probably a bit misleading: even though the
+list implementations remains within a factor of 2X of the array implementation, the latter seems consistently faster,
+especially as the sequences grow. (Note: This is probably because the array implementation doesn't have the overhead of
+allocating and linking in a fresh Node object for each append, and this savings more than compensates for
+the cost of the occasional array copies that it requires.)
+

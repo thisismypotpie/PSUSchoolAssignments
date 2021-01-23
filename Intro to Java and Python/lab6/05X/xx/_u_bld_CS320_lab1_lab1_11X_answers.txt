@@ -1,0 +1,45 @@
+Put your answers in this file.
+
+(a)SMinterp
+
+1. Add error:
+-Array out of bounds exception is thrown.
+
+2. Empty pop error:
+-Code ran with no errors.
+
+3. Begin with no end error:
+-Array out of bounds exception is thrown.
+
+4. Mispell error:
+-Code ran with no errors.
+
+5. Letter push error:
+-Number format exception thrown.
+
+(b)SMcompiler
+
+1. Add error:
+-I was able to compile the SM code to a java file.
+-I was able to compile the java file using javac.
+-Array out of bounds exception is thrown when file is run.
+
+
+2. Empty pop error:
+-SM file compiled to java file.
+-Java file compiled.
+-Java code ran.
+-No errors throughout.
+
+3. Begin with no end error:
+-SM file compiled into java file.
+-end of file reached while parsing error when trying to use javac to compile file.
+
+4. Mispell error:
+-SM file compiled to java file.
+-Java file compiled.
+-Java code ran.
+-No errors throughout.
+
+5. Letter push error:
+-Number format exception thrown in SM to java conversion.

@@ -1,0 +1,2 @@
+The program I have created is close to complete.  It runs without crahsing
+and hw3a2 does feature conditional jumps.  For some reason the only problem I was having was moving things to crcTable as when I run the program, the programs come up blank.  I was very close completing this program but after working 40 of the past 48 hours to find where my program was going wrong I was unable to find the final errors.  Both of the assembly files run but not as expected.  Please let me know what I missed so my nect assignment will run more smoothly.  

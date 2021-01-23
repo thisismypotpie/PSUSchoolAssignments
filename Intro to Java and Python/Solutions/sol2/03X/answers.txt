@@ -1,0 +1,53 @@
+Possible solutions:
+
+(a) 
+
+(1) S -> (S)S
+(2) S -> 
+
+To see that this grammar is unambiguous, consider any step in a
+left-most deriviation. First of all, observe that every S in the
+partially expanded string must either be followed by a ')' or be
+at the end of the string. (This is easy to prove by induction.)
+Now consider the left-most S.  If the next terminal to match is '(',
+we must use production (1) --- because if we used production (2)
+we would _then_ need to match the '(' against ')' or end of string,
+which would fail.  If the next terminal to match is ')' or we are at
+the end of string, we must use production (2) --- because if we used
+production (1) we would _then_ need to match ')' or end of string
+against '(', which would fail.  Since there is no choice about which
+production to use at each step, the generated derivation must be unique.
+
+(b)
+
+E -> E + P
+E -> P
+P -> P * F
+P -> F
+F -> A ^ F
+F -> A
+A -> (E)
+A -> n
+
+The informal argument for non-ambiguity is the same as in the lecture,
+but with an additional level: an E is a left-associated sum of P's; a
+P is a left-associate product of F's; and an F is a right-associated
+exponential tower of A's.
+
+(c)
+
+(1) S -> ;
+(2) S -> T 
+(3) T -> n ;
+(4) T -> n , T
+
+To see that this grammar is unambiguous, consider any step in a
+left-most deriviation. If the next nonterminal to be expanded is an S
+and the next terminal to match is ';' we must use production (1),
+otherwise production (2).  If the next nonterminal to be expanded is a T,
+then the next terminal must be an 'n'. To decide what to do we must look
+at the terminal _after_ that, to see if it is a ';' or a ',' ---
+if the former, we must use production (3), if the latter, production (4).
+Since there is no choice about which production to use at each step,
+the generated derivation must be unique.
+

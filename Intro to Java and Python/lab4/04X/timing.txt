@@ -1,0 +1,66 @@
+claim one:
+For arrays, prepending is much slower than appending.
+
+This this test I will have 100 repetitions of the test, perform 100,000 prepends and appends respecitvely with 500 reads.
+
+I have confirmed that prepending does indeed take much more time, as 100,000 tests repeated over 100 iterations took too long for me to wait, pulling the plug around the two minute mark.  In contrast, it took appending: 
+
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer array 100 100000 0 500
+real    0m0.336s
+user    0m0.275s
+sys     0m0.114s
+
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer array 100 0 100000 500
+(test stopped after two minutes.)
+
+
+Test Two
+ 
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer array 1000 10000 0 1000
+real    0m0.372s
+user    0m0.283s
+sys     0m0.097s
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer array 1000 0 10000 1000
+
+real    0m13.306s
+user    0m13.268s
+sys     0m0.136s
+
+claim two:
+For lists, prepending and appending are roughly the same speed.
+
+Results:
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer list 100 100000 0 500
+
+real    0m5.733s
+user    0m5.633s
+sys     0m0.257s
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer list 100 0 100000 500
+
+real    0m5.719s
+user    0m5.688s
+sys     0m0.197s
+
+Test Two.
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer list 1000 0 10000 1000
+
+real    0m11.028s
+user    0m10.816s
+sys     0m0.228s
+bld@ada:~/CS320/lab4/04X$ time java IntSequenceTimer list 1000 10000 0 1000
+
+real    0m10.424s
+user    0m10.160s
+sys     0m0.284s
+It is confirmed, these two take the roughly the same amount of time.
+
+claim three:
+Prepending is must faster in the list implementation than in the array implementation.
+
+I do not need to run a further test to prove this statement is true. Based on the fact that the same test was run on both arrays in test one, and lists in test two, I know that prepending is faster for lists based on the fact that I had to end the test for prepending arrays after two minutes.
+
+claim four:
+Appending is roughtly the same speed for both implementations.
+This statement is false based on the information discovered in test one and two.  Since bothe tests were given the same parameters barring the use of arrays vs lists, it took an array less than a second to complete the test, while it took five seconds for the list to complete the test, therefore array are much faster at appending.
+
+
